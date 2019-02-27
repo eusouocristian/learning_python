@@ -1,0 +1,3 @@
+Quando for necessário verificar quais comandos é possivel realizar com um tipo de arquivo:
+dir(nome_do_arquivo)
+
