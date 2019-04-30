@@ -28,7 +28,7 @@ input("Enter para continuar: > ")
 
 # Cria um pack de variáveis
 def packer(name = None, **kwargs):
-    print(kwargs)
+    print("kwargs:", kwargs)
 
 packer(name="Cristian", idade = 32, weigth = 80)
 
