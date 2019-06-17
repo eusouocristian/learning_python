@@ -32,10 +32,6 @@ def tuple_packer(*args):
       print(args)
 tuple_packer('cristian',27,[1,2,3,4]) #It creates a tuple with  a 'str', 'int' and a 'list'     
 
-``
-
-
-
 
 
 

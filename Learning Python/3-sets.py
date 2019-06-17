@@ -13,6 +13,22 @@ print(set1)
 print(set2)
 print("\n")
 
+set_a = set([1,2,3,4])
+print("set_a: ", set_a)
+set_a.add(5)
+print("set_a.add(5): ",set_a)
+set_a.update({6,7}, {8,9}) #uptade can add a group of sets at once
+print("set_a.update({6,7}, {8,9}): ",set_a)
+set_a.remove(1)
+print("set_a.remove(1): ",set_a)
+set_a.discard(2)
+print("set_a.discard(2): ",set_a)
+item_pop = set_a.pop() # .pop() takes a item off the set, the first one, and returns it
+print("item_pop = set_a.pop(): ", item_pop)
+
+
+
+print("\n\n")
 
 # Union (cria um novo set com a união dos items em ambos os sets)
 set3 = set([1,3,4,5,6,7,8])
