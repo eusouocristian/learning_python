@@ -19,9 +19,9 @@ set_a.add(5)
 print("set_a.add(5): ",set_a)
 set_a.update({6,7}, {8,9}) #uptade can add a group of sets at once
 print("set_a.update({6,7}, {8,9}): ",set_a)
-set_a.remove(1)
+set_a.remove(1) # returns an error when the item doesn't exist in the set
 print("set_a.remove(1): ",set_a)
-set_a.discard(2)
+set_a.discard(2) #Doesn't return an error if the item is not in the set
 print("set_a.discard(2): ",set_a)
 item_pop = set_a.pop() # .pop() takes a item off the set, the first one, and returns it
 print("item_pop = set_a.pop(): ", item_pop)
