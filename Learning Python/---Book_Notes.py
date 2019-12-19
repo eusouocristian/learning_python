@@ -19,7 +19,8 @@ dicionario = packer(name = "Cristian", Idade = 32, Religiao = False, Status = "M
 print(dicionario,"\n")
 
 ##Tuples:
-# Immutable
+# Preferable to use, we can acess the data quickly
+# Immutable <<<----
 # you can transform a list into a tuple
 tuple1 = 5, 6, 7
 tuple2 = (2,3,4)
