@@ -47,10 +47,12 @@ class Eu(Student):
     def feedback(self, grade):
         super().feedback(grade)
 
+# Primeiro se cria uma instancia, copia da classe eu para Cristian
 Cristian = Eu('Cristian', age = 33)
 Cristian.praise_Cristian()
 Cristian.feedback(55)
 
-Cristian.__class__
-Cristian.__class__.__name__
-
+# pegar a classe e a str do nome da classe:
+print('Cristian.__class__: ', Cristian.__class__)
+print('Cristian.__class__.__name__: ', Cristian.__class__.__name__)
+print('hello')
