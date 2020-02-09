@@ -55,4 +55,5 @@ Cristian.feedback(55)
 # pegar a classe e a str do nome da classe:
 print('Cristian.__class__: ', Cristian.__class__)
 print('Cristian.__class__.__name__: ', Cristian.__class__.__name__)
+print('hahaha')
 
