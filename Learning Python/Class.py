@@ -51,3 +51,6 @@ Cristian = Eu('Cristian', age = 33)
 Cristian.praise_Cristian()
 Cristian.feedback(55)
 
+Cristian.__class__
+Cristian.__class__.__name__
+
