@@ -89,5 +89,3 @@ nums = range(1, 10, 2) # start, stop, step
 nums = range(1, 10, 2)
 nums.index(5) # 2
 nums.index(1) # 0
-
-teste('teste')
