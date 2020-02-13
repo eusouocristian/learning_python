@@ -13,6 +13,19 @@ class Vector:
         soma = Vector(self.x + other.x, self.y + other.y)
         return soma
         
+
+class InvertString(str):
+    def __new__(*args, **kwargs):
+        self = str.__new__(*args, **kwargs)
+        self = self[::-1]
+        return self
+
+
+
+
 A = Vector(1,3)
 B = Vector(4,-1)
 print(A+B)
+
+Inverted = InvertString('hello')
+print(Inverted)
