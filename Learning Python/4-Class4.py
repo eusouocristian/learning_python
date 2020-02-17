@@ -12,7 +12,9 @@ class Vector:
     def __add__(self, other):
         soma = Vector(self.x + other.x, self.y + other.y)
         return soma
+
         
 A = Vector(1,3)
 B = Vector(4,-1)
 print(A+B)
+print(A-B)
