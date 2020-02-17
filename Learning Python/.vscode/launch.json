@@ -4,7 +4,10 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+<<<<<<< HEAD
         
+=======
+>>>>>>> df05ac2196d2a93654a3b47642946cdf0486d295
         {
             "name": "Python: Arquivo Atual",
             "type": "python",
