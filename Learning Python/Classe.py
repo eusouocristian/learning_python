@@ -60,11 +60,11 @@ class FilledList(list):
 class Liar(list):
     def __len__(self):
         return super().__len__() + 10
-
 # import Classe
 # a = Classe.Liar([1,2,3])
 # len(a)              (devera retornar 13)
 
+# Constructor
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -82,11 +82,67 @@ class Bookcase:
         books = []
         for title, author in book_list:
             books.append(Book(title, author))
-        return cls(books)
+        return cls(books) #return (change) the instance (value) of the class bookcase
+# from Classe import Bookcase
+# bs = Bookcase.create_bookcase([('O mundo Assombrado', 'Carl Sagan'), ('A sombra do vento', 'C. R. Zafon')])
+# bs.books        deverá retornar>> [<Classe.Book object at 0x10c078588>, <Classe.Book object at 0x10c092fd0>]
+# str(bs.books[0])    deverá retornar>> 'O mundo Assombrado by Carl Sagan'
+# str(bs.books[1])    deverá retornar>> 'A sombra do vento by C. R. Zafon'
 
+## CHALENGE
+class Letter:
+    def __init__(self, pattern=None):
+        self.pattern = pattern
+      
+    def __iter__(self):
+        yield from self.pattern
+      
+    def __str__(self):
+        output = []
+        for blip in self:
+            if blip == '.':
+                output.append('dot')
+            else:
+                output.append('dash')
+        return '-'.join(output)
 
+    @classmethod
+    def from_string(cls, word):
+        word = word.split('-')
+        new = []
+        for code in word:
+            if code == 'dot':
+                new.append('.')
+            else:
+                new.append('_')
+        return cls(new)
 
+class S(Letter):
+    def __init__(self):
+         pattern = ['.', '.', '.']
+         super().__init__(pattern)
 
+## -----------------------------------------
+
+class Circle:
+    def __init__(self, diameter):
+        self.diameter = diameter
+    
+    # Para poder atribuir valores como propriedades de um objeto
+    # assim pode ser chamado como
+    # c = Circle(10)
+    # c.radius           >> Deve retornar 5
+    @property
+    def radius(self):
+        return self.diameter / 2
+    
+    # Para poder alterar valores de propriedades
+    # Assim sendo, 
+    # c.radius = 50
+    # c.diameter           >> Deve retornar 100
+    @radius.setter
+    def radius(self, radius):
+        self.diameter = radius * 2
 
 
 
