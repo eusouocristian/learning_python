@@ -34,10 +34,17 @@ class Die:
     
     def __radd__(self, other): # 5 + D6
         return int(self) + other
+    
+    def __repr__(self): 
+        return str(self.value)
 
 class D6(Die):
     def __init__(self, value=0):
         super().__init__(sides=6, value = value)
+
+class D20(Die):
+    def __init__(self, value=0):
+        super().__init__(sides=20, value = value)
     
 
 # from dice import D6
