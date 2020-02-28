@@ -35,8 +35,23 @@ print(re.match(r'Love', data))
 # use search to look for a string in somewhere in the text
 print(re.search(r'Kenneth', data))
 
+# \w{3} - matches any three word characters in a row.
+# \w{,3} - matches 0, 1, 2, or 3 word characters in a row.
+# \w{3,} - matches 3 or more word characters in a row. There's no upper limit.
+# \w{3, 5} - matches 3, 4, or 5 word characters in a row.
+# \w? - matches 0 or 1 word characters.
+# \w* - matches 0 or more word characters. Since there is no upper limit, this is, effectively, infinite word characters.
+# \w+ - matches 1 or more word characters. Like *, it has no upper limit, but it has to occur at least once.
+# .findall(pattern, text, flags) - Finds all non-overlapping occurrences of the pattern in the text.
+
 # We have to put \ before () like that -> \( <content> \) because parenthesis have a different meaning in raw strings
-print(re.search(r'\(\d\d\d\) \d\d\d-\d\d\d\d', data))
+print('Linha 48: ', re.search(r'\(\d\d\d\) \d\d\d-\d\d\d\d', data)) # re.search = returns the first match
+print('Linha 49: ', re.findall(r'\(?\d{3}\)?-?\s?\d{3}-\d{4}', data))  # re.findall = returns all matches
+print('Linha 50: ', re.findall(r'\w*, \w+', data))
+
+
+
+
 
 
 
