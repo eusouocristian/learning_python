@@ -48,7 +48,7 @@ print(re.search(r'Kenneth', data))
 print('Linha 48: ', re.search(r'\(\d\d\d\) \d\d\d-\d\d\d\d', data)) # re.search = returns the first match
 print('Linha 49: ', re.findall(r'\(?\d{3}\)?-?\s?\d{3}-\d{4}', data))  # re.findall = returns all matches
 print('Linha 50: ', re.findall(r'\w*, \w+', data))
-
+# teste
 
 
 
