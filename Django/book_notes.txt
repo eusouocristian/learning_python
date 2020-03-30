@@ -27,3 +27,13 @@ ao criar o seguinte, no arquivo models.py:
     def __str__(self):
         return self.title
 irá retornar o título de cada curso, nesse caso
+
+Criar usuario para gerenciar Django com link localhost:8000/admin
+python manage.py createsuperuser 
+se pode criar courses diretamente pela interface admin do navegador
+
+Criando Templates:
+Criar uma nova pasta no app courses, chamada Templates
+uma pasta dentro da pasta templates, com o nome do app, no caso, courses
+criar um arquivo dentro, chamado course_list.html
+
