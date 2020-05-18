@@ -1,3 +1,13 @@
+Estrutura:
+quando chamamos um caminho no navegador,
+ele deve estar cadastrado na pasta do app/urls
+app pode ter o nome de learning_site, por exemplo
+esse caminho executará um metodo chamado no path dentro de app/urls, 
+o método está descrito em views.py dentro do app
+e ele apenas renderiza o arquivo html que está dentro da pasta templates.
+
+-------------------------------------------------------------------------
+
 começar um novo projeto: 
 abrir a pasta no terminal e digitar
 django-admin startproject <nome_do_projeto>
@@ -14,7 +24,7 @@ python manage.py startapp courses
 ira criar a pasta 'courses'
 ir até learning_site/settings.py e incluir courses em INSTALLED_APPS
 
-criado um 'Model' no arquivo models.py (class Clourses)
+criando um 'Model' no arquivo models.py (class Clourses)
 python manage.py makemigrations courses
 ira criar um arquivo na pasta migrations
 
