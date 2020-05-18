@@ -61,7 +61,28 @@
       <option name="project" value="LOCAL" />
       <updated>1589833099741</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ok">
+      <created>1589833316562</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589833316562</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ok">
+      <created>1589833347165</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589833347165</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ok">
+      <created>1589833413453</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589833413453</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -71,10 +92,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="267" y="60" key="CommitChangelistDialog2" timestamp="1589833346459">
+    <state x="267" y="60" key="CommitChangelistDialog2" timestamp="1589833412968">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="267" y="60" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1589833346459" />
+    <state x="267" y="60" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1589833412968" />
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1589833342452">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
