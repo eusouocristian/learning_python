@@ -36,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gerenciador_tarefas/app/static/app" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,6 +92,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="127" key="#Notifications" timestamp="1589920564857">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="127" key="#Notifications/0.23.1440.877@0.23.1440.877" timestamp="1589920564857" />
     <state x="267" y="60" key="CommitChangelistDialog2" timestamp="1589833412968">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -100,10 +104,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1589833342452" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1589827805758">
+    <state x="221" y="100" width="1219" height="722" key="SettingsEditor" timestamp="1589920929716">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1589827805758" />
+    <state x="221" y="100" width="1219" height="722" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1589920929716" />
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1589920534247">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="397" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1589920534247" />
     <state x="503" y="385" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589833010379">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
