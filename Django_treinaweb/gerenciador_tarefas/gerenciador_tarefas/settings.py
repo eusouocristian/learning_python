@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'gerenciador_tarefas',
         'USER': 'root',
         'PASSWORD': 'canuKs01',
-        'HOST': 'MacBook-Pro.local',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
@@ -117,6 +117,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+LOGIN_URL = 'logar_usuario'
 
 
 # Static files (CSS, JavaScript, Images)

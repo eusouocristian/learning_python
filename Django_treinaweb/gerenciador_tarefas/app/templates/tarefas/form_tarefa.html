@@ -1,9 +1,37 @@
 {% extends 'base.html' %}
 
+{% load meus_filtros %}
+<!--Para adicionar uma classe do bootstrap no label, basta carregar o filtro e adicionar no codigo-->
+<!--{{ ...   |addclass:'form-control' }}-->
+
 {% block conteudo %}
 
 <form method="post">
-    {{ form.tarefa.titulo }}
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form_tarefa.titulo.errors }}
+        <label>Título:</label>
+        {{ form_tarefa.titulo|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ form_tarefa.descricao.errors }}
+        <label>Descrição:</label>
+        {{ form_tarefa.descricao|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ form_tarefa.data_expiracao.errors }}
+        <label>Data de Expiração:</label>
+        {{ form_tarefa.data_expiracao|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        {{ form_tarefa.prioridade.errors }}
+        <label>Prioridade:</label>
+        {{ form_tarefa.prioridade|addclass:'form-control' }}
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Salvar">
+    </div>
+
 
 </form>
 
