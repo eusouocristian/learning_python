@@ -1,0 +1,8 @@
+Para fazer o DEPLOY:
+- criar conta no Heroku
+- instalar o Heroku CLI (   brew tap heroku/brew && brew install heroku   )
+- No terminal logar no Heroku  (   heroku login   )
+- Clicar no link e efetuar login pelo navegador. Após, voltar ao terminal. Irá aparecer:
+    Logging in... done
+    Logged in as eusouocristian@hotmail.com
+- Ir no Dashboard do site do Heroku (nos tres risquinhos de menu ao lado da foto do perfil) e criar uma nova aplicação.
