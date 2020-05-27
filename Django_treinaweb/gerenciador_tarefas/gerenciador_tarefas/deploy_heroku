@@ -1,4 +1,14 @@
-Para fazer o DEPLOY:
+- Tem que desenvolver o projeto dentro da mesma virtualenv.
+- para criar uma nova virtualenv chamada 'env'':
+    python3 -m venv env
+- para ativar a virtualenv, tem que achar o arquivo activate no projeto, nesse caso estava no caminho:
+ /Users/Cristian/env/bin/activate
+- Depois é só rodar o comando:  (    source <caminho>   )
+- Com a virtualenv ativada no terminal do Pycharm fica facil de instalar os pacotes via pip
+- Mais informações sobre vienv:
+    https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+
+Para fazer o DEPLOY do projeto:
 - criar conta no Heroku
 - instalar o Heroku CLI (   brew tap heroku/brew && brew install heroku   )
 - No terminal logar no Heroku  (   heroku login   )
@@ -15,4 +25,13 @@ Para fazer o DEPLOY:
 - Fazer o link do app do Heroku com o repositório Git:
     heroku git:remote -a <nome_do_app>
     por exemplo:   heroku git:remote -a gerenciador-do-cristian
+- Instalar pacote django-heroku ( pip install django-heroku )
+    No meu caso, estava dando um erro, instalei via pip, e depois instalei o heroku também. (pip install heroku)
+- Instalar o pacote gunicorn
+- Criar o arquivo Procfile na raiz;
+- Criar o arquivo requirements.txt
+    pip freeze > requirements.txt
+    Se não der certo, criar manualmente requirements.txt, rodar ( pip freeze ) e copiar o conteudo no arquivo txt
+
+
 
