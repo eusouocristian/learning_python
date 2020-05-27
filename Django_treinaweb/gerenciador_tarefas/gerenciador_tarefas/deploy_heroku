@@ -6,3 +6,13 @@ Para fazer o DEPLOY:
     Logging in... done
     Logged in as eusouocristian@hotmail.com
 - Ir no Dashboard do site do Heroku (nos tres risquinhos de menu ao lado da foto do perfil) e criar uma nova aplicação.
+- Verificar status dos arquivos do git (atualizar branch). Se o diretório já estiver no git:
+    git status
+    git add -A
+    git commit -m 'mensagem do commit'
+    git push
+    mais informações: https://rogerdudler.github.io/git-guide/index.pt_BR.html
+- Fazer o link do app do Heroku com o repositório Git:
+    heroku git:remote -a <nome_do_app>
+    por exemplo:   heroku git:remote -a gerenciador-do-cristian
+
