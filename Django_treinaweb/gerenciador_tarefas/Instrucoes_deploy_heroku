@@ -32,6 +32,10 @@ Para fazer o DEPLOY do projeto:
 - Criar o arquivo requirements.txt
     pip freeze > requirements.txt
     Se não der certo, criar manualmente requirements.txt, rodar ( pip freeze ) e copiar o conteudo no arquivo txt
+- Atualizar os arquivos no git e fazer upload para o Heroku
+    git add .
+    git commit -m 'Deploy da aplicacao'
+    git push heroku master
 
 
 
