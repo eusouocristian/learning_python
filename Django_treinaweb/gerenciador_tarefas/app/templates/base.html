@@ -4,37 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Gerenciador de Tarefas</title>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="{% static 'app/css/bootstrap.min.css' %}">
 </head>
-<body>
 
+<body data-spy="scroll" data-target="spy-scroll-id">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Gerenciador de Tarefas</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'listar_tarefas' %}">Listar Tarefas   <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'cadastrar_tarefa' %}">Cadastro de Tarefas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'deslogar_usuario' %}">Sair</a>
-      </li>
-    </ul>
-  </div>
+    <div class="container ml-1">
+
+        <a class="navbar-brand mr-n3"><img src=" {% static 'app/images/pic.jpg' %}" class="rounded-circle h-50 w-50"></a>
+            <h4 class="badge badge-dark text-wrap font-italic mt-2 mr-auto ml-n5" style="width: 8rem;">
+                Gerenciador de Tarefas
+            </h4 >
+
+        {% if user.is_authenticated %}
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#NavbarMenu">
+            <span class="navbar-toggler-icon">
+            </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="NavbarMenu">
+
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item">
+                    {% if caminho == '/listar_tarefas/' %}
+                    <a class="nav-link px-4 active" href="{% url 'listar_tarefas' %}">Listar Tarefas</a>
+                    {% else %}
+                    <a class="nav-link px-4" href="{% url 'listar_tarefas' %}">Listar Tarefas</a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    {% if caminho == '/cadastrar_tarefa/' %}
+                    <a class="nav-link px-4 active" href="{% url 'cadastrar_tarefa' %}">Cadastrar Tarefas</a>
+                    {% else %}
+                    <a class="nav-link px-4" href="{% url 'cadastrar_tarefa' %}">Cadastrar Tarefas</a>
+                    {% endif %}
+                </li>
+                <li class="nav-item px-4 mr-4">
+                <a class="nav-link" href="{% url 'deslogar_usuario' %}">Sair</a>
+                </li>
+            </ul>
+
+        {% endif %}
+        </div>
+    </div>
 </nav>
 
 
 <main class="container">
-{% block conteudo %}
-<!-- comentario: essa estratégia serve para se usar o template base e se inserir conteudo no block 'conteudo' -->
-{% endblock conteudo %}
+    {% block conteudo %}
+    <!-- comentario: essa estratégia serve para se usar o template base e se inserir conteudo no block 'conteudo' -->
+    {% endblock conteudo %}
 </main>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

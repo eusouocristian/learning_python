@@ -6,8 +6,9 @@
 
 {% block conteudo %}
 
-<form method="post">
+<form action="" method="post" style="width:600px; margin: auto">
     {% csrf_token %}
+    <p></p>
     <div class="form-group">
         {{ form_tarefa.titulo.errors }}
         <label>Título:</label>
@@ -22,6 +23,8 @@
         {{ form_tarefa.data_expiracao.errors }}
         <label>Data de Expiração:</label>
         {{ form_tarefa.data_expiracao|addclass:'form-control' }}
+        <small class="form-text text-muted">dd/mm/aaaa</small>
+        <div class="invalid-feedback">Invalid data</div>
     </div>
     <div class="form-group">
         {{ form_tarefa.prioridade.errors }}
@@ -29,9 +32,9 @@
         {{ form_tarefa.prioridade|addclass:'form-control' }}
     </div>
     <div class="form-group">
-        <input type="submit" value="Salvar">
+        <input type="submit" value="Salvar" class="btn btn-primary">
+        <a href="{% url 'listar_tarefas' %}" class="btn btn-secondary">Voltar</a>
     </div>
-
 
 </form>
 

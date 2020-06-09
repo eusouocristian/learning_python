@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, redirect
 from app.forms import TarefaForm
 from app.entidades.tarefa import Tarefa
@@ -15,11 +15,14 @@ from app.services import tarefa_service
 @login_required()
 def listar_tarefas(request):
     tarefas = tarefa_service.listar_tarefas(request.user)
-    return render(request, 'tarefas/listar_tarefas.html', {'tarefas': tarefas})
+    caminho = request.path
+    return render(request, 'tarefas/listar_tarefas.html',
+                  {'tarefas': tarefas, 'caminho': caminho})
 
 
 @login_required()
 def cadastrar_tarefa(request):
+    caminho = request.path
     if request.method == 'POST':
         form_tarefa = TarefaForm(request.POST)
         if form_tarefa.is_valid():
@@ -33,15 +36,18 @@ def cadastrar_tarefa(request):
                                  prioridade=prioridade,
                                  usuario=request.user)
             tarefa_service.cadastrar_tarefa(tarefa_nova)
+
             # redireciona para url
-            return redirect('listar_tarefas')
+            return redirect('listar_tarefas',)
     else:
         form_tarefa = TarefaForm()
-    return render(request, 'tarefas/form_tarefa.html', {'form_tarefa': form_tarefa})
+    return render(request, 'tarefas/form_tarefa.html', {'form_tarefa': form_tarefa,
+                                                        'caminho': caminho})
 
 
 @login_required()
 def editar_tarefa(request, id):
+    caminho = request.path
     tarefa_bd = tarefa_service.listar_tarefa_id(id)
     if tarefa_bd.usuario != request.user:
         return HttpResponse('Não Permitido')
@@ -58,13 +64,14 @@ def editar_tarefa(request, id):
                              usuario=request.user)
         tarefa_service.editar_tarefa(tarefa_bd, tarefa_nova)
         return redirect('listar_tarefas')
-    return render(request, 'tarefas/form_tarefa.html', {'form_tarefa': form_tarefa})
+    return render(request, 'tarefas/form_tarefa.html', {'form_tarefa': form_tarefa, 'caminho': caminho})
 
 
 @login_required()
 def remover_tarefa(request, id):
+    caminho = request.path
     tarefa_bd = tarefa_service.listar_tarefa_id(id)
     if request.method == 'POST':
         tarefa_service.remover_tarefa(tarefa_bd)
         return redirect('listar_tarefas')
-    return render(request, 'tarefas/confirma_exclusao.html', {'tarefa': tarefa_bd})
+    return render(request, 'tarefas/confirma_exclusao.html', {'tarefa': tarefa_bd, 'caminho': caminho})

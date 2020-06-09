@@ -1,13 +1,3 @@
-- Tem que desenvolver o projeto dentro da mesma virtualenv.
-- para criar uma nova virtualenv chamada 'env'':
-    python3 -m venv env
-- para ativar a virtualenv, tem que achar o arquivo activate no projeto, nesse caso estava no caminho:
- /Users/Cristian/env/bin/activate
-- Depois é só rodar o comando:  (    source <caminho>   )
-- Com a virtualenv ativada no terminal do Pycharm fica facil de instalar os pacotes via pip
-- Mais informações sobre vienv:
-    https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-
 Para fazer o DEPLOY do projeto:
 - criar conta no Heroku
 - instalar o Heroku CLI (   brew tap heroku/brew && brew install heroku   )
@@ -22,13 +12,20 @@ Para fazer o DEPLOY do projeto:
     git commit -m 'mensagem do commit'
     git push
     mais informações: https://rogerdudler.github.io/git-guide/index.pt_BR.html
+    Se não estiver no git, criar um diretório no github e fazer inicialização do git conforme mostrado no github
+    para ignorar arquivos, criar um arquivo em branco .gitignore e colocar o nome dos arquivos ou pastas ignorados
+        *.py     -> ignora os arquivos com extensão .py
+        instrucoes_django    -> ignora esse arquivo
 - Fazer o link do app do Heroku com o repositório Git:
     heroku git:remote -a <nome_do_app>
     por exemplo:   heroku git:remote -a gerenciador-do-cristian
 - Instalar pacote django-heroku ( pip install django-heroku )
     No meu caso, estava dando um erro, instalei via pip, e depois instalei o heroku também. (pip install heroku)
+- Alterar o arquivo settings.py
+    import django-heroku
+    no final do arquivo, django_heroku.settings(locals())
 - Instalar o pacote gunicorn
-- Criar o arquivo Procfile na raiz;
+- Criar o arquivo Procfile na raiz com o caminho do arquivo wsgi no formato <nome_do_projeto>.wsgi;
 - Criar o arquivo requirements.txt
     pip freeze > requirements.txt
     Se não der certo, criar manualmente requirements.txt, rodar ( pip freeze ) e copiar o conteudo no arquivo txt
@@ -36,6 +33,13 @@ Para fazer o DEPLOY do projeto:
     git add .
     git commit -m 'Deploy da aplicacao'
     git push heroku master
+- Executar comando ( heroku run python manage.py migrate ) para criar o banco de dados
+
+- Para atualizar a aplicação no servidor do Heroku:
+    git add .
+    git commit -m 'Deploy da aplicacao'
+    git push heroku master
+
 
 
 

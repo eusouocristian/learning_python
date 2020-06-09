@@ -1,17 +1,25 @@
-# Download the helper library from https://www.twilio.com/docs/python/install
+# virtualenv => env2
 from twilio.rest import Client
+import os
+import token_mobilio
 
-
-# Your Account Sid and Auth Token from twilio.com/console
-# DANGER! This is insecure. See http://twil.io/secure
-account_sid = 'ACd3a00fc6a3c0b4f15e18b802e3aa631a'
-auth_token = '92d5bbf16db76ea1c4f45561f732e35e'
+# Criadas as variaveis no ambiente do sist. operacional para esconder sid e token do Twilio
+# Essas informações estão no site do Twilio
+# os.environ['account_sid'] = 'xxxxx'
+# os.environ['auth_token'] = 'xxxxx'
+token_mobilio.generate_token()
+account_sid = os.environ['account_sid']
+auth_token = os.environ['auth_token']
 client = Client(account_sid, auth_token)
 
-message = client.messages.create(
-                              from_='+14155238886',
-                              body='teste',
-                              to='+5551998034545'
-                          )
+# SMS Message
+# message = client.messages.create(from_='+12015810478',
+#                                  body='teste',
+#                                  to='+5551998034545')
+
+# Whatsapp Message
+message = client.messages.create(from_='whatsapp:+14155238886',
+                                 body='Oi queridão',
+                                 to='whatsapp:+555198034545')
 
 print(message.sid)
