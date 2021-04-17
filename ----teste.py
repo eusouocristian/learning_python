@@ -8,3 +8,4 @@ def stringcases(string):
     return tuple([upper,lower,title,reverse_out])
 
 print(stringcases('stratocaster'))
+#
